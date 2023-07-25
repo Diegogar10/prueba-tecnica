@@ -6,12 +6,15 @@ const usersContainer = document.querySelector('.users-container');
 const modal = document.querySelector('.modal-container');
 let menuItemSelect ;
 
+//vializamos o no el modal a traves de una clase
 const toggleModal = (state) => {
   state ?
   modal.classList.remove('invisible')
   : modal.classList.add('invisible');
 }
 
+
+//renderizamos el modal segun el usuario seleccionado
 const handleRenderModal = (data) => {
   const button = document.createElement('button');
   const h2 = document.createElement('h2');
@@ -94,6 +97,7 @@ const handleMenuItem = (event) => {
   dataYear[0].users.forEach(item => renderDataUser(item, usersContainer));
 }
 
+//render dinamico del menu
 const renderMenuItem = (year, node, selected)=> {
 
   const itemMenu = document.createElement('li');
